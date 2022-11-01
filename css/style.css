@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+/*Обнулення (reset)*/
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+li {
+	list-style: none;
+}
+a {
+	color: inherit;
+}
+a:link,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+img{
+	vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+input,
+button,
+textarea {
+	font-family: inherit;
+	font-size: inherit;
+}
+button {
+	cursor: pointer;
+	color: inherit;
+	background-color: inherit;
+}
+html,
+body{
+	height: 100%;
+}
+
+
+/*Стилізація*/
+[class*="__container"]{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.wrapper{
+	overflow: hidden;
+	position: relative;
+	min-height: 100%;
+}
+.header{
+	margin-bottom: 20px;
+}
+.header__title{
+	font-size: 30px;
+	color: rgb(107, 60, 2);
+	font-weight: 700;
+	text-align: center;
+}
+.header span{
+	color: red;
+}
+.puzzle__picture{
+	overflow: hidden;
+	width: 500px;
+	height: 300px;
+	margin: 0 auto;
+}
+.puzzle__picture img:nth-child(1){
+	transform: translate(206px, 1.5px);
+}
+.puzzle__picture img:nth-child(2){
+	transform: translate(239px, 67px);
+}
+.puzzle__picture img:nth-child(3){
+	transform: translate(64.2px, 2px);
+}
+.puzzle__picture img:nth-child(4){
+	transform: translate(-40px, 115px);
+}
+.puzzle__picture img:nth-child(5){
+	transform: translate(120.7px, 87px);
+}
+.puzzle__picture img:nth-child(6){
+	transform: translate(-39px, 39px);
+}
+.puzzle__picture img:nth-child(7){
+	transform: translate(-25px, 105px);
+}
+.puzzle__picture img:nth-child(8){
+	transform: translate(-350px, 89px);
+}
+.puzzle__picture img:nth-child(9){
+	transform: translate(281.5px, -126.1px);
+}
+.puzzle__picture img:nth-child(10){
+	transform: translate(-50.9px, -193px);
+}
+.puzzle__picture img:nth-child(11){
+	transform: translate(-37px, -143px);
+}
+.puzzle__picture img:nth-child(12){
+	transform: translate(-282px, -125px);
+}
+.puzzle__picture img:nth-child(13){
+	transform: translate(115px, -257px);
+}
+.puzzle__picture img:nth-child(14){
+	transform: translate(33px, -302.5px);
+}
+.puzzle__picture img:nth-child(15){
+	transform: translate(-213px, -189.5px);
+}
+.puzzle__picture img:nth-child(16){
+	transform: translate(14px,-303px);
+}
+.puzzle__picture img:nth-child(17){
+	transform: translate(0px,-420px);
+}
+.puzzle__picture img:nth-child(18){
+	transform: translate(55.5px,-286px);
+}
+.puzzle__picture img:nth-child(19){
+	transform: translate(-119px,-222.5px);
+}
+.puzzle__picture img:nth-child(20){
+	transform: translate(60px,-283.7px);
+}
+.puzzle__picture img:nth-child(21){
+	transform: translate(-184px, -286px);
+}
+.puzzle__picture img:nth-child(22){
+	transform: translate(2.2px, -464px);
+}
+.puzzle__picture img:nth-child(23){
+	transform: translate(181.6px, -332px);
+}
+.puzzle__picture img:nth-child(24){
+	transform: translate(149px, -334.5px);
+}
+.bubble{
+	background-color:aqua;
+	padding-bottom: 20px;
+}
+.bubble__container div{
+	margin: 0 auto;
+}
+.bubble__container>div:not(:last-child){
+	margin-bottom: 20px;
+}
+.bubble__text{
+	text-align: center;
+	font-size: 25px;
+	color: blue;
+	font-weight: 700;
+	font-style: italic;
+}
+.bubble__text~div{
+	max-width: 173px;
+}
+.bubble p{
+	font-size: 20px;
+	color: red;
+	text-transform: uppercase;
+	font-weight: 700;
+	text-align: center;
+}
+.bubble__scale:hover img{
+transform: scale(0.5);
+}
+.bubble__rotate:hover img{
+	transform: rotate(180deg);
+}
+.bubble__skew:hover img{
+	transform: skew(-30deg, 10deg);
+}
+.bubble__matrix:hover img{
+	transform: matrix(1, 1, 0.7, 0, 0, 0);
+}
+.bubble__origin:hover img{
+	transform-origin: bottom right;
+	transform: rotate(40deg);
+}
+.bubble__3d{
+	background-color: blueviolet;
+	border-radius: 30px;
+	width: 173px;
+	height: 200px;
+	perspective: 200px;
+	transform-style: preserve-3d;
+}
+.bubble__translate3d{
+	width: 173px;
+	height: 200px;
+	border-radius: 30px;
+	background: url(../img/bubble.png) no-repeat blue;
+}
+.bubble__3d:hover .bubble__translate3d{
+	transform: translate3d(40px, -30px, 50px);
+}
+.bubble__style{
+	width: 173px;
+	height: 200px;
+	perspective: 300px;
+	transform-style: preserve-3d;
+	background-color: rgb(138, 44, 226, 0.8);
+	border-radius: 40px;
+}
+.bubble__transform{
+	width: 173px;
+	height: 200px;
+	transform: rotateX(0deg);
+	background: url(../img/bubble.png) no-repeat blue;
+	border-radius: 40px;
+}
+.bubble__transform:hover{
+	transform: rotateX(50deg);
+}
+.backface-visibility__body{
+	position: relative;
+	width: 173px;
+	height: 200px;
+	transform-style: preserve-3d;
+}
+.backface-visibility__face,
+.backface-visibility__back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	border-radius: 30px;
+}
+.backface-visibility__face{
+	background: url(../img/bubble.png) no-repeat blue;
+	z-index: 2;
+	transform: rotateY(0deg);
+	backface-visibility: hidden;
+}
+.backface-visibility__back{
+	background: url('../img/bubbleback.png') no-repeat blueviolet;
+	transform: rotateY(-180deg);
+}
+.backface-visibility:hover .backface-visibility__body{
+	transform: rotateY(-180deg);
+}
+.footer{
+	background-color: yellow;
+}
+.footer__slogan{
+	text-align: center;
+	font-size: 30px;
+	color: blue;
+	text-transform: capitalize;
+	font-weight: 700;
+}
